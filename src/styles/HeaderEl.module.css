@@ -1,0 +1,36 @@
+.container {
+  max-width: 1240px; /*максимальная ширина экрана*/
+  width: 100%; /*ширина от максимальной ширины экрана*/
+  margin: 0 auto; /*в моей случае, экран чуть шире чем 1240px, поэтому остается не закрашенный фон, а он выравнивает по центру*/
+  padding: 0 2rem; /*rem зависит от font-size, в моей случае он - 16px, то есть 2rem - это 2 * 16px = 32px*/
+}
+
+.header {
+  /* box-shadow: var(--shadow); установка тени вокруг компоненты header */
+  background-color: var(
+    --colors-ui-base
+  ); /*установка цвета фона компоненты header на всю длину ширины экрана независимо от container, так как он внутри header, а не снаружи*/
+}
+
+.wrapper {
+  display: flex; /*переводит дочерние элементы по горизонтали*/
+  justify-content: space-between; /*задаёт одинаковое расстояние между блоками, но не между контейнером и блоками.*/
+  align-items: center; /*выравнивает блоки по вертикали по центру*/
+  padding: 2rem 0; /*rem зависит от font-size, в моей случае он - 16px, то есть 2rem - это 2 * 16px = 32px*/
+  color: var(--colors-text);
+  font-size: var(--fs-sm);
+  font-weight: var(--fw-bold);
+}
+
+.title {
+  text-decoration: none;
+}
+
+.changeTheme {
+  cursor: pointer;
+  text-transform: capitalize; /*преобразует начальные буквы элемента в заглавные*/
+}
+
+.logo {
+  margin-left: 0.75rem;
+}
