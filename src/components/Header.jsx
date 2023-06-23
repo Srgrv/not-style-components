@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 
 //styles
 import style from "../styles/HeaderEl.module.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [theme, setTheme] = useState("light");
@@ -18,9 +19,9 @@ const Header = () => {
     <header className={style.header}>
       <div className={style.container}>
         <div className={style.wrapper}>
-          <a href="/" className={style.title}>
+          <Link to="/" className={style.title}>
             Where is a country?
-          </a>
+          </Link>
           <div className={style.changeTheme} onClick={toggleTheme}>
             {theme === "light" ? <IoMoon size="14px" /> : <IoMoonOutline />}
 

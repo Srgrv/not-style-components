@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import Select from "react-select";
 
@@ -16,9 +16,18 @@ const options = [
   { value: "Oceania", label: "Oceania" },
 ];
 
-const Controls = () => {
+const Controls = ({ onSearch }) => {
   const [search, setSearch] = useState("");
   const [region, setRegion] = useState("");
+
+  useEffect(() => {
+    const regionValue = region?.value || "";
+
+    onSearch(search, regionValue);
+
+    //eslint-disable-next-value
+  }, [search, region]);
+
   return (
     <div className={style.controls}>
       <Search search={search} setSearch={setSearch} />
