@@ -23,6 +23,6 @@
   color: var(--colors-text);
 }
 
-.input::placeholder {
+/* .input::placeholder {
   color: blue;
-}
+} */
